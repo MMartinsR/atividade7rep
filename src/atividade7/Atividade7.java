@@ -1,9 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package atividade7;
+
+import java.util.Locale;
+import java.util.Scanner;
 
 /**
  *
@@ -11,11 +10,21 @@ package atividade7;
  */
 public class Atividade7 {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter your weight: ");
+        double weight = sc.nextDouble();
+        System.out.print("Enter your height: ");
+        double height = sc.nextDouble();
+        
+        double imc = weight / (height * height);
+        
+        System.out.println("Your imc is: " + String.format("%.2f", imc));       
+        
     }
     
 }
